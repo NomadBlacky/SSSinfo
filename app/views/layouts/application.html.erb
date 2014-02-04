@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SSSinfo</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <h1 class="center">SSSinfo</h1>
+
+  <div style="padding-left:5%">
+	<%= yield %>
+  </div>
+
+  <br>
+  <hr>
+  <%= link_to "TOP", servers_path %>
+
+</body>
+</html>

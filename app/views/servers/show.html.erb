@@ -1,0 +1,50 @@
+<h2><%= @title = Server.full_name(params[:id]) %></h2>
+<br>
+
+<div>
+  <div style="float:left; padding-left:5%">
+	カード位置
+	<table id="ap_pos_num" border="1">
+	  <tr>
+		<td><button class="bt_num">1</button></td>
+		<td><button class="bt_num">2</button></td>
+		<td><button class="bt_num">3</button></td>
+	  </tr>
+	  <tr>
+		<td><button class="bt_num">4</button></td>
+		<td><button class="bt_num">5</button></td>
+		<td><button class="bt_num">6</button></td>
+	  </tr>
+	</table>
+  </div>
+
+  <div style="float:left; padding-left:5%">
+	フォルダアドレス
+	<table id="ap_pos_alp" border="1">
+	  <tr><td><button class="bt_alp">A</button></td></tr>
+	  <tr><td><button class="bt_alp">B</button></td></tr>
+	  <tr><td><button class="bt_alp">C</button></td></tr>
+	</table>
+  </div>
+</div>
+
+<div id="out" style="clear:both">
+  none
+</div>
+<div>
+  <table id="server_view" border="1">
+	<% no = 0 %>
+	<% @table.each do |line| %>
+	<tr>
+	  <% line.each do |item| %>
+	  <td id="<%= "no#{no += 1}" %>">
+		<%= item.html_safe %>
+	  </td>
+	  <% end %>
+	</tr>
+	<% end%>
+  </table>
+</div>
+
+<%= javascript_include_tag "server-show.js" %>
+

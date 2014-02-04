@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meteor: false
+  level: 1
+  name: MyString
+  file_path: MyString
+
+two:
+  meteor: false
+  level: 1
+  name: MyString
+  file_path: MyString
